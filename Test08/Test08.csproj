@@ -71,31 +71,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClaimDetails.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Login.aspx" />
     <Content Include="logon.aspx" />
     <Content Include="packages.config" />
     <Content Include="Register.aspx" />
-    <Content Include="Test08.Master" />
-    <Content Include="Scripts\jquery-2.1.4.min.map" />
-    <Content Include="User_area\List2.aspx" />
-    <Content Include="ViewSwitcher.ascx" />
-    <Content Include="WebForm2.aspx" />
-    <Content Include="Site.Mobile.Master" />
-    <Content Include="User_area\Web.config" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -107,6 +89,24 @@
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Test08.Master" />
+    <Content Include="User_area\List2.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="User_area\Web.config" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Site.Mobile.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
