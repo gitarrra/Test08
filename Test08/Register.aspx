@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-    <div class="form-horizontal" role="form">
+    <div class="form-horizontal">
 
     
     <h2>Register a new account</h2>
@@ -17,10 +17,9 @@
         <div class="col-sm-4">
             <asp:TextBox ID="UserEmailTextBox" runat="server" TextMode="Email" CssClass="form-control" ToolTip="Enter email"    />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" 
-            ControlToValidate="UserEmailTextBox"
-            Display="Dynamic" 
-            ErrorMessage="Cannot be empty." 
-            runat="server" />
+            ControlToValidate="UserEmailTextBox"        
+            ErrorMessage="Email field cannot be empty." 
+            runat="server" Display="None" />
 
         </div>
 
@@ -34,8 +33,8 @@
                 <asp:TextBox ID="firstNameTextBox" runat="server" TextMode="SingleLine" CssClass="form-control" ToolTip="Enter email"    />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" 
                 ControlToValidate="firstNameTextBox"
-                Display="Dynamic" 
-                ErrorMessage="Cannot be empty." 
+                Display="None" 
+                ErrorMessage="First Name field cannot be empty." 
                 runat="server" />
             </div>
         </div>
@@ -46,9 +45,8 @@
                 <asp:TextBox ID="lastNameTextBox" runat="server" TextMode="SingleLine" CssClass="form-control" ToolTip="Enter email"    />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" 
                 ControlToValidate="lastNameTextBox"
-                Display="Dynamic" 
-                ErrorMessage="Cannot be empty." 
-                runat="server" />
+                ErrorMessage="Last Name field cannot be empty." 
+                runat="server" Display="None" />
             </div>
         </div>
 
@@ -62,13 +60,13 @@
           <asp:TextBox ID="UserPassTextBox" TextMode="Password" CssClass="form-control" runat="server" />
           <asp:RequiredFieldValidator ID="RequiredFieldValidator2" 
                 ControlToValidate="UserPassTextBox"
-                ErrorMessage="Cannot be empty." 
-                runat="server" />
+                ErrorMessage="Password field cannot be empty." 
+                runat="server" Display="None" />
 
 
           <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator"
         ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$"
-        ControlToValidate="UserPassTextBox"></asp:RegularExpressionValidator>
+        ControlToValidate="UserPassTextBox" Display="Dynamic"></asp:RegularExpressionValidator>
     
       </div>
         <label class="control-label col-sm-2">Confirm Password:</label>
@@ -76,14 +74,15 @@
           <asp:TextBox ID="UserPass2" TextMode="Password" CssClass="form-control" runat="server" />
           <asp:RequiredFieldValidator ID="RequiredFieldValidator3" 
                 ControlToValidate="UserPass2"
-                ErrorMessage="Cannot be empty." 
-                runat="server" />
+                ErrorMessage="Confirm Password field cannot be empty." 
+                runat="server" Display="None" />
       </div>
         
 
     </div>
-
+        
         <br />
-        <asp:Button runat="server" ID="submitButton" Text="Register" CssClass="btn" OnClick="submitButton_Click" />
+        
 </div>
+    <asp:Button runat="server" ID="submitButton"  Text="RegisterExtra" OnClick="submitButton_Click1" CssClass="btn" />
 </asp:Content>
