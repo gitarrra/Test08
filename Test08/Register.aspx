@@ -12,7 +12,7 @@
         <p>&nbsp;</p>
         <p>&nbsp;</p>
 
-    <div class="form-group" style="height: 100px">
+    <div class="form-group" style="height: 60px">
       <label for="email" class="control-label col-sm-2">Email:</label>
         <div class="col-sm-4">
             <asp:TextBox ID="UserEmailTextBox" runat="server" TextMode="Email" CssClass="form-control" ToolTip="Enter email"    />
@@ -25,6 +25,36 @@
         </div>
 
     </div>
+
+
+
+        <div class="form-group" style="height: 60px">
+            <label for="firstname" class="control-label col-sm-2">First Name:</label>
+            <div class="col-sm-4">
+                <asp:TextBox ID="firstNameTextBox" runat="server" TextMode="SingleLine" CssClass="form-control" ToolTip="Enter email"    />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" 
+                ControlToValidate="firstNameTextBox"
+                Display="Dynamic" 
+                ErrorMessage="Cannot be empty." 
+                runat="server" />
+            </div>
+        </div>
+
+        <div class="form-group" style="height: 60px">
+            <label for="lastname" class="control-label col-sm-2">Last Name:</label>
+            <div class="col-sm-4">
+                <asp:TextBox ID="lastNameTextBox" runat="server" TextMode="SingleLine" CssClass="form-control" ToolTip="Enter email"    />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" 
+                ControlToValidate="lastNameTextBox"
+                Display="Dynamic" 
+                ErrorMessage="Cannot be empty." 
+                runat="server" />
+            </div>
+        </div>
+
+
+
+
 
     <div class="form-group">
       <label for="pwd" class="control-label col-sm-2">Password:</label>
