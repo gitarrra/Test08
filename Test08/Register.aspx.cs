@@ -15,37 +15,22 @@ namespace Test08
 
         }
 
-       
-
         protected void submitButton_Click(object sender, EventArgs e)
         {
-            //Server.HtmlEncode(TextBox1.Text)
-
             string password = UserPassTextBox.Text;
+            string login = UserEmailTextBox.Text;
 
-            string login = Server.HtmlEncode(UserEmailTextBox.Text);
-
-            if (ClaimRepository.IsLoginInDatabase(login) > 0)
+            if (ClaimRepository.IsLoginInDatabase(login)>0)
             {
                 //check if user name (email) exist
                 Console.WriteLine("Zmien login");
-
                 return;
 
 
             }
 
 
-            Crypto.SavePassword(login, password);
-        }
-
-        protected void submitButton_Click1(object sender, EventArgs e)
-        {
-            //Server.HtmlEncode(TextBox1.Text)
-
-            string password = UserPassTextBox.Text;
-
-            string login = Server.HtmlEncode(UserEmailTextBox.Text);
+            test04.DB.Crypto.SavePassword(login, password);
         }
     }
 }
