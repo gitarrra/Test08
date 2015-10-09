@@ -24,7 +24,7 @@
       <asp:TextBox ID="UserPass" TextMode="Password" CssClass="form-control" runat="server" />
       <asp:RequiredFieldValidator ID="RequiredFieldValidator2" 
             ControlToValidate="UserPass"
-            ErrorMessage="Cannot be empty." 
+            ErrorMessage="Field 'Password' cannot be empty." 
             runat="server" />
         
         

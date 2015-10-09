@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+using System.Web.Security;
+
 namespace Test08
 {
     public partial class Login : System.Web.UI.Page
@@ -16,7 +18,18 @@ namespace Test08
 
         protected void Logon_Click(object sender, EventArgs e)
         {
+            string _login = UserEmail.Text;
+            string _password = UserPass.Text;
 
+            if (test04.DB.Crypto.VerifyPassword(_login, _password))
+            {
+                FormsAuthentication.RedirectFromLoginPage
+                   (_login, Persist.Checked);
+            }
+            else
+            {
+                Msg.Text = "Invalid credentials. Please try again.";
+            }
         }
     }
 }

@@ -75,6 +75,7 @@
     <Content Include="logon.aspx" />
     <Content Include="packages.config" />
     <Content Include="Register.aspx" />
+    <Content Include="Register2.aspx" />
     <Content Include="Test08.Master" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="User_area\List2.aspx" />
@@ -145,6 +146,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register2.aspx.cs">
+      <DependentUpon>Register2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register2.aspx.designer.cs">
+      <DependentUpon>Register2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>

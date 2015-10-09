@@ -17,6 +17,10 @@ namespace Test08
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
+
+
+            //server.htmlencode
+
             string password = UserPassTextBox.Text;
             string login = UserEmailTextBox.Text;
 
@@ -30,7 +34,7 @@ namespace Test08
             }
 
 
-            test04.DB.Crypto.SavePassword(login, password);
+            test04.DB.Crypto.SavePassword("john","smith",login, password);
         }
     }
 }
