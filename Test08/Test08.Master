@@ -33,7 +33,7 @@
                 <li><a href="#">Physicians</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="Register2.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a runat="server" href="~/Register2.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 
                  <li><a runat="server" href ="WebForm2.aspx?x=1"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                   

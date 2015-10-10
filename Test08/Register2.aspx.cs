@@ -34,12 +34,11 @@ namespace Test08
                 //check if user name (email) exist
                 
                 return;
-
-
             }
 
 
-            test04.DB.Crypto.SavePassword( firstName,lastName, email, password);
+            if (test04.DB.Crypto.SavePassword(firstName, lastName, email, password))
+                Response.Redirect("~/WebForm2");
 
         }
     }
