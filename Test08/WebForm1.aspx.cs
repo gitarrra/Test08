@@ -33,7 +33,7 @@ namespace Test08
             }
             
             
-            ViewState.Add("claimIndex", claimIndex);
+            //ViewState.Add("claimIndex", claimIndex);
 
 
 
@@ -42,9 +42,6 @@ namespace Test08
             ListView1.DataBind();
         }
 
-        protected void okButton_Click(object sender, EventArgs e)
-        {
-            
-        }
+      
     }
 }

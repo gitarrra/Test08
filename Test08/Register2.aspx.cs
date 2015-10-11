@@ -14,7 +14,7 @@ namespace Test08
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         protected void registryButton_Click(object sender, EventArgs e)

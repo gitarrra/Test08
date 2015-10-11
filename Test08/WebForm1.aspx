@@ -1,11 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Test08.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Test08.WebForm1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
  
    
-     <asp:Button class="btn btn-success" runat="server" ID="okButton" Text="OK" OnClick="okButton_Click" />
+     <asp:Button class="btn btn-success" runat="server" ID="okButton" Text="OK"  />
+
 
  <br />
 

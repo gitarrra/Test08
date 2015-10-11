@@ -20,7 +20,11 @@ namespace Test08
             {
                 // it means logout
                 FormsAuthentication.SignOut();
+                Response.Redirect("WebForm2.aspx");
+                
             }
+
+           
 
         }
 

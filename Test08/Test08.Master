@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Test08.master.cs" Inherits="Test08.Test08"  %>
 
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -20,7 +21,7 @@
               
             </div>
             <div>
-              <ul class="nav navbar-nav">
+              &nbsp;<ul class="nav navbar-nav">
                 <li><a runat="server" href="~/WebForm2">Home</a></li>
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Claims<span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -31,11 +32,43 @@
                 </li>
                 <li><a runat="server" href="~/WebForm1.aspx">Prescriptions</a></li>
                 <li><a href="#">Physicians</a></li>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                 
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><a runat="server" href="~/Register2.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                   <li class="nav-tabs">                     
+                    <asp:LoginView id="LoginView1"  runat="server" >
+                       <AnonymousTemplate>
+                        <li><a runat="server" href="~/Register2.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a runat="server" href ="WebForm2.aspx?x=1"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        <li><a runat="server" href="WebForm1.aspx"><span class="glyphicon glyphicon-user"></span><asp:LoginName id="LoginName1" runat="Server"></asp:LoginName></a></li>
+                        <li><a runat="server" href ="WebForm2.aspx?x=1"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
+                    </LoggedInTemplate>
+                    </asp:LoginView>
+                  </li>
                 
-                 <li><a runat="server" href ="WebForm2.aspx?x=1"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                
+                 
                   
               </ul>
             </div>
