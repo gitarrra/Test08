@@ -42,6 +42,7 @@
                       <td><%# Item.PatientFirstName %> <%# Item.PatientLastName %></td>
                       <td style="text-align : right" ><%# String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", Item.AmountBilledSum) %></td>
                       <td style="text-align : right"><%# String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", Item.PatientResponsibilitySum) %></td>
+                      <%--<td style="text-align : right"><a href="ClaimDetails.aspx?c=<%# Item.EncryptedClaimNumber %>">More detail</a>--%>
                       <td style="text-align : right"><a href="ClaimDetails.aspx?c=<%# Item.EncryptedClaimNumber %>">More detail</a>
                       </td>
                   </tr>

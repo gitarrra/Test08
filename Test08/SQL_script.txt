@@ -1,6 +1,17 @@
 select TOP 100 claim_number,first_name,last_name,facility_name, date_claim FROM Claims INNER JOIN Users ON Users.user_id= Claims.user_id Inner JOIN Facilities ON Facilities.facility_id = Claims.facility_id WHERE Claims.user_id='2ED3183E-056B-E511-AAD9-AC7289DB9A88' ORDER BY Claims.date_claim DESC
 
 
+
+
+
+
+Select TOP 100 claim_number,first_name,last_name,facility_name, date_claim, (select SUM(amount_billed) FROM Claim_services WHERE claim_number=Claims.claim_number) as 'amount',  (select SUM(patient_responsibility)  FROM Claim_services WHERE claim_number=Claims.claim_number) as 'patient_responibility' FROM Claims INNER JOIN Users ON Users.user_id= Claims.user_id Inner JOIN Facilities ON Facilities.facility_id = Claims.facility_id WHERE Users.login ='r.dmowski@wp.pl' ORDER BY Claims.date_claim DESC
+
+Select TOP 100 claim_number,first_name,last_name,facility_name, date_claim, (select SUM(amount_billed) FROM Claim_services WHERE claim_number=Claims.claim_number) as 'amount',  (select SUM(patient_responsibility)  FROM Claim_services WHERE claim_number=Claims.claim_number) as 'patient_responibility' FROM Claims INNER JOIN Users ON Users.user_id= Claims.user_id Inner JOIN Facilities ON Facilities.facility_id = Claims.facility_id WHERE User.login='r.dmowski@wp.pl' ORDER BY Claims.date_claim DESC
+
+
+
+
 [dbo].[Claim_services] (
     [claim_number]           BIGINT        NOT NULL,
     [service_details_text]   VARCHAR (350) NULL,

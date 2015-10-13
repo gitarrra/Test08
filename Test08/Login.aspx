@@ -21,7 +21,7 @@
 
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <asp:TextBox ID="UserPass" TextMode="Password" CssClass="form-control" runat="server" />
+      <asp:TextBox ID="UserPass" TextMode="Password" placeholder="Enter password" CssClass="form-control" runat="server" />
       <asp:RequiredFieldValidator ID="RequiredFieldValidator2" 
             ControlToValidate="UserPass"
             ErrorMessage="Field 'Password' cannot be empty." 

@@ -2,5 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h3>Witaj na stronie początkowej</h3>
+    <div class="page-header">
+    <h1>Hello world !</h1>      
+  </div>
 </asp:Content>

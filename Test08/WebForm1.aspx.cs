@@ -19,8 +19,13 @@ namespace Test08
 
         protected void DataPager1_PreRender(object sender, EventArgs e)
         {
-            Guid _userGuid = (Guid)Session["userId"];
-            var claims = ClaimRepository.GetListClaim(_userGuid);
+
+            //replace Guid userId with HttpContext.Current.User.Identity.Name
+            //Guid _userGuid = (Guid)Session["userId"];
+
+            string _userName = HttpContext.Current.User.Identity.Name;
+
+            var claims = ClaimRepository.GetListClaim(_userName);
 
             ListView1.DataSource = claims;
             ListView1.DataBind();

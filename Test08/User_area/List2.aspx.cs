@@ -11,7 +11,7 @@ namespace Test08.User_area
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            resultLabel.Text = "User " + HttpContext.Current.User.Identity.Name + "</br> UserId=" + (Guid)Session["userId"];
+            resultLabel.Text = "User " + HttpContext.Current.User.Identity.Name ;
 
         }
     }

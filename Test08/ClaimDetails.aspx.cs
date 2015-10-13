@@ -41,9 +41,12 @@ namespace Test08
         public Claim GetClaimDetails(
                     [QueryString("c")] string _claimEncrypted)
         {
+            //replace Guid userId with HttpContext.Current.User.Identity.Name
+            //Guid _userGuid = (Guid)Session["userId"];
+            string _userName = HttpContext.Current.User.Identity.Name;
 
-            Guid _userGuid = (Guid)Session["userId"];
-            long _claimNumber = long.Parse( XORencrypt.Decrypt(_claimEncrypted, _userGuid.ToString()));
+
+            long _claimNumber = long.Parse( XORencrypt.Decrypt(_claimEncrypted,_userName));
             
                 claim = test04.DB.ClaimRepository.GetClaim(_claimNumber);  
 
