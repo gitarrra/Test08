@@ -5,13 +5,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Test08.User_area
+namespace Test08
 {
-    public partial class List2 : System.Web.UI.Page
+    public partial class Default : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            resultLabel.Text = "User " + HttpContext.Current.User.Identity.Name + "</br> UserId=" + (Guid)Session["userId"];
 
         }
     }

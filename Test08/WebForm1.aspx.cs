@@ -19,24 +19,8 @@ namespace Test08
 
         protected void DataPager1_PreRender(object sender, EventArgs e)
         {
-            var claims = ClaimRepository.GetListClaim();
-
-
-
-            Dictionary<int, long> claimIndex = new Dictionary<int, long>();
-
-            int i = 0;
-            foreach (var _claim in claims)
-            {
-                claimIndex.Add(i, _claim.ClaimNumber);
-                i++;
-            }
-            
-            
-            //ViewState.Add("claimIndex", claimIndex);
-
-
-
+            Guid _userGuid = (Guid)Session["userId"];
+            var claims = ClaimRepository.GetListClaim(_userGuid);
 
             ListView1.DataSource = claims;
             ListView1.DataBind();
@@ -45,3 +29,25 @@ namespace Test08
       
     }
 }
+
+/*
+<ItemTemplate>
+                  <tr runat="server">
+                    <td>
+                      <asp:Label ID="VendorIDLabel" runat="server" Text='<%# Item.ClaimNumber %>' />
+                        <br />
+                        <a href="ClaimDetails.aspx?claimID=<%# Item.ClaimNumber %>">More detail</a>
+                    </td>
+                    <td>
+                      <asp:Label ID="AccountNumberLabel" runat="server" Text='<%# Item.PatientFirstName %>' />
+                    </td>
+                    <td>
+                      <asp:Label ID="NameLabel" runat="server" Text='<%# Item.PatientLastName %>' /></td>
+                    <td>
+                        <a href="ClaimDetails.aspx?claimID=<%# Item.ClaimNumber %>">More <br />detail</a>
+                    </td>
+                  </tr>
+                </ItemTemplate>
+*/
+
+    

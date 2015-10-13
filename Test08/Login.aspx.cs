@@ -23,8 +23,8 @@ namespace Test08
 
             if (test04.DB.Crypto.VerifyPassword(_login, _password))
             {
-                FormsAuthentication.RedirectFromLoginPage
-                   (_login, Persist.Checked);
+                Session["userId"] = test04.DB.Crypto.userGUID;
+                FormsAuthentication.RedirectFromLoginPage (_login, Persist.Checked);
             }
             else
             {

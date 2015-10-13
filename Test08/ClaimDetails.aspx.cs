@@ -20,6 +20,8 @@ namespace Test08
     {
         Claim claim = new Claim();
 
+       
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //Dictionary<int, long> claimIndex = (Dictionary < int, long>)ViewState["claimIndex"];
@@ -37,17 +39,13 @@ namespace Test08
 
         
         public Claim GetClaimDetails(
-                    [QueryString("ClaimID")] long? _claimNumber)
+                    [QueryString("c")] string _claimEncrypted)
         {
+
+            Guid _userGuid = (Guid)Session["userId"];
+            long _claimNumber = long.Parse( XORencrypt.Decrypt(_claimEncrypted, _userGuid.ToString()));
             
-            if (_claimNumber.HasValue)
-            {
-                claim = test04.DB.ClaimRepository.GetClaim((long)_claimNumber);
-            }
-            else
-            {
-                claim = null;
-            };
+                claim = test04.DB.ClaimRepository.GetClaim(_claimNumber);  
 
            return claim;
         }
@@ -78,5 +76,7 @@ namespace Test08
 
 
         }
+
+     
     }
 }

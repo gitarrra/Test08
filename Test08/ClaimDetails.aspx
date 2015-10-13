@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Test08.Master" AutoEventWireup="true" CodeBehind="ClaimDetails.aspx.cs" Inherits="Test08.ClaimDetails" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <LINK rel="stylesheet" href="Content/style-for-print.css" type="text/css" media="print">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:FormView runat="server" ID="claimDetails" ItemType="test04.DTO.Claim" SelectMethod="GetClaimDetails" DataKeyNames="ClaimNumber" RenderOuterTable="False">
@@ -114,6 +115,19 @@
 
    </div>
     
+
+    
+    <%--<input type="button" id="printButton" value="Print" title="Print" onclick="javascript: window.print();" />--%>
+
+
+    <button class="btn" onclick="printPage()">Print this page</button>
+    <script>
+    function printPage() {
+        window.print();
+    }
+    </script>
+
+
 
 
 

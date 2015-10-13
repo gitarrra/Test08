@@ -16,5 +16,23 @@ namespace Test08
         {
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
+
+        void Application_Error(object sender, EventArgs e)
+        {
+            //Exception ex = Server.GetLastError();
+            //var InnerException = ex.InnerException;
+
+            Server.Transfer("/Error2.aspx");
+
+            //if (InnerException.GetType() == typeof(ArgumentOutOfRangeException))
+            //{
+            //    Server.Transfer("Error.aspx");
+            //}
+            //Response.Write("<h2>Something...</h2>");
+            //Response.Write("<p>" + InnerException.Message + "  source: " + InnerException.Source);
+
+            
+        }
     }
+
 }
