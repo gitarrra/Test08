@@ -75,6 +75,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="Error2.aspx" />
+    <Content Include="images\homescreen.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="Register.aspx" />

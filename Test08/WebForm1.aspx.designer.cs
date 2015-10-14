@@ -13,13 +13,13 @@ namespace Test08 {
     public partial class WebForm1 {
         
         /// <summary>
-        /// okButton control.
+        /// ListView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button okButton;
+        protected global::System.Web.UI.WebControls.ListView ListView1;
         
         /// <summary>
         /// DataPager1 control.
@@ -29,14 +29,5 @@ namespace Test08 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataPager DataPager1;
-        
-        /// <summary>
-        /// ListView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListView1;
     }
 }

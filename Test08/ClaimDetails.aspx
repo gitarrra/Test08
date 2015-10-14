@@ -117,15 +117,20 @@
     
 
     
-    <%--<input type="button" id="printButton" value="Print" title="Print" onclick="javascript: window.print();" />--%>
+   <%--<input type="button" id="printButton" value="Print" title="Print" onclick="javascript: window.print();" <span class="glyphicon glyphicon-print"></span> Print />--%>
 
 
-    <button class="btn" onclick="printPage()">Print this page</button>
+    <button id="printButton" type="button" class="btn btn-default" onclick="javascript: window.print();">
+      <span class="glyphicon glyphicon-print"></span> Print 
+    </button>
+
+
+    <%--<button class="btn" onclick="printPage()">Print this page</button>
     <script>
     function printPage() {
         window.print();
     }
-    </script>
+    </script>--%>
 
 
 

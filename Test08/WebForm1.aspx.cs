@@ -6,12 +6,16 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 using test04.DB;
+using test04.DTO;
 
 
 namespace Test08
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        public string TotalAmountBilled { get; set; }
+        public string TotalYourResponsibility { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -26,33 +30,28 @@ namespace Test08
             string _userName = HttpContext.Current.User.Identity.Name;
 
             var claims = ClaimRepository.GetListClaim(_userName);
+            calculateTotal(claims);
 
+            
             ListView1.DataSource = claims;
             ListView1.DataBind();
         }
 
+        private void calculateTotal(List<ClaimListItem> _claimsList)
+        {
+            decimal _amount = 0;
+            decimal _resposibility = 0;
+
+
+            foreach (var item in _claimsList)
+            {
+                _amount += (decimal)item.AmountBilledSum;
+                _resposibility += (decimal)item.PatientResponsibilitySum;
+            }
+
+            TotalAmountBilled = String.Format("{0:C}",_amount);
+            TotalYourResponsibility = String.Format("{0:C}", _resposibility);
+        }
       
     }
 }
-
-/*
-<ItemTemplate>
-                  <tr runat="server">
-                    <td>
-                      <asp:Label ID="VendorIDLabel" runat="server" Text='<%# Item.ClaimNumber %>' />
-                        <br />
-                        <a href="ClaimDetails.aspx?claimID=<%# Item.ClaimNumber %>">More detail</a>
-                    </td>
-                    <td>
-                      <asp:Label ID="AccountNumberLabel" runat="server" Text='<%# Item.PatientFirstName %>' />
-                    </td>
-                    <td>
-                      <asp:Label ID="NameLabel" runat="server" Text='<%# Item.PatientLastName %>' /></td>
-                    <td>
-                        <a href="ClaimDetails.aspx?claimID=<%# Item.ClaimNumber %>">More <br />detail</a>
-                    </td>
-                  </tr>
-                </ItemTemplate>
-*/
-
-    
