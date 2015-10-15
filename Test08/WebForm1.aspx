@@ -5,12 +5,24 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
  
-   
+  
    <div class="col-md-10 col-md-offset-1">
 
-              <h3>List of claims</h3>
+              <h3>List of claims<span  style="position: absolute; right: 0px; ">
+         
+        <asp:DataPager ID="DataPager1" runat="server"  PageSize="10" OnPreRender="DataPager1_PreRender" class="btn"  PagedControlID="ListView1">
+            <Fields>
+                <asp:NextPreviousPagerField ShowLastPageButton="False" ShowNextPageButton="False" ButtonType="Button" ButtonCssClass="btn btn-xs btn-default" RenderNonBreakingSpacesBetweenControls="false" />
+                <asp:NumericPagerField ButtonType="Button" RenderNonBreakingSpacesBetweenControls="false" NumericButtonCssClass="btn btn-xs btn-default" CurrentPageLabelCssClass="btn disabled" NextPreviousButtonCssClass="btn" />
+                <asp:NextPreviousPagerField ShowFirstPageButton="False" ShowPreviousPageButton="False" ButtonType="Button" ButtonCssClass="btn btn-xs btn-default" RenderNonBreakingSpacesBetweenControls="false" />
+            </Fields>
+        </asp:DataPager>
+   </span></h3>
+       <br />
 
-    <asp:ListView ID="ListView1"    runat="server" ItemType="test04.DTO.ClaimListItem" DataKeyNames="ClaimNumber">
+
+
+    <asp:ListView ID="ListView1"    runat="server" ItemType="test04.DTO.ClaimListItem" DataKeyNames="ClaimNumber" OnDataBound="ListView1_DataBound">
                
         
         
@@ -55,20 +67,9 @@
                   </tr>
                 </ItemTemplate>
             </asp:ListView>
-    <div>
-         
-
-        <asp:DataPager ID="DataPager1" runat="server"  PageSize="3" OnPreRender="DataPager1_PreRender" class="btn-group pager-buttons" PagedControlID="ListView1">
-        <Fields>
-            <asp:NextPreviousPagerField ShowLastPageButton="False" ShowNextPageButton="False" ButtonType="Button" ButtonCssClass="btn" RenderNonBreakingSpacesBetweenControls="false" />
-            <asp:NumericPagerField ButtonType="Button" RenderNonBreakingSpacesBetweenControls="false" NumericButtonCssClass="btn" CurrentPageLabelCssClass="btn disabled" NextPreviousButtonCssClass="btn" />
-            <asp:NextPreviousPagerField ShowFirstPageButton="False" ShowPreviousPageButton="False" ButtonType="Button" ButtonCssClass="btn" RenderNonBreakingSpacesBetweenControls="false" />
-        </Fields>
-    </asp:DataPager>
-
-
-
-   </div>
+    
+       
+       
 
 
 
@@ -77,6 +78,14 @@
                                             width="100" height="75" style="border: solid" /></a>--%>
 
         </div>
+
+
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="FooterPlaceHolder" runat="server">
+
+  
+
 
 
 </asp:Content>

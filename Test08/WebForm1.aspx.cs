@@ -33,8 +33,14 @@ namespace Test08
             calculateTotal(claims);
 
             
+
             ListView1.DataSource = claims;
             ListView1.DataBind();
+        }
+
+        protected void ListView1_DataBound(object sender, EventArgs e)
+        {
+            DataPager1.Visible = (DataPager1.PageSize < DataPager1.TotalRowCount);
         }
 
         private void calculateTotal(List<ClaimListItem> _claimsList)

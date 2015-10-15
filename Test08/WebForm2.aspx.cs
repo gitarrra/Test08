@@ -15,15 +15,7 @@ namespace Test08
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            String s = Request.QueryString["x"];
-            if (s=="1")
-            {
-                // it means logout
-                FormsAuthentication.SignOut();
-                
-                Response.Redirect("WebForm2.aspx");
-                
-            }
+            
 
            
 

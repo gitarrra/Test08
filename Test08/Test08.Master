@@ -13,6 +13,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    
     <form id="form1" runat="server">
 
       <nav class="navbar navbar-default">
@@ -38,7 +39,7 @@
                     </AnonymousTemplate>
                     <LoggedInTemplate>
                         <li><a runat="server" href="WebForm1.aspx"><span class="glyphicon glyphicon-user"></span><asp:LoginName id="LoginName1" runat="Server"></asp:LoginName></a></li>
-                        <li><a runat="server" href ="WebForm2.aspx?x=1"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
+                        <li><a runat="server" href ="~/Default.aspx?x=1"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
                     </LoggedInTemplate>
                     </asp:LoginView>
                   </li>
@@ -58,6 +59,11 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </div>
+
+    <div class="footer"> 
+        <asp:ContentPlaceHolder ID="FooterPlaceHolder" runat="server"> 
+        </asp:ContentPlaceHolder> 
+    </div> 
     </form>
     <script src="Scripts/jquery-2.1.4.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>

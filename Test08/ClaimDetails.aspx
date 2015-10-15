@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Test08.Master" AutoEventWireup="true" CodeBehind="ClaimDetails.aspx.cs" Inherits="Test08.ClaimDetails" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <LINK rel="stylesheet" href="Content/style-for-print.css" type="text/css" media="print">
+    <link rel="stylesheet" href="Content/style-for-print.css" type="text/css" media="print"/>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:FormView runat="server" ID="claimDetails" ItemType="test04.DTO.Claim" SelectMethod="GetClaimDetails" DataKeyNames="ClaimNumber" RenderOuterTable="False">
@@ -8,14 +8,10 @@
 
             <asp:Panel runat="server" ID="claimHeaderPanel">
                <h6> <table style="text-align: right; width: 100% ;  border-style:none">
-                    <colgroup>
-                        <col />
-                        <col style="width: 180px" />
-                        <col style="width: 200px" />
-                    </colgroup>
-                    <tr style="height: 20px">
-                        <td style="text-align: left"">Claim No.<%# Item.ClaimNumber %>for <%# Item.PatientFirstName %>&nbsp<%# Item.PatientLastName %></td>
-                        <td>
+      
+                    <tr style="height: 20px"> 
+                        <td style="text-align: left;" class="col-md-2">Claim No.<%=ClaimDetailsSet.ClaimNumber %>for <%# Item.PatientFirstName %>&nbsp<%# Item.PatientLastName %></td>
+                        <td class="col-md-1 col-md-offset-10">
                             Date Received
                         </td>
                         <td>
@@ -26,9 +22,7 @@
                         <td></td>
                         <td><b>Visited</b></td>
                         <td><%# Item.FacilityName %></td>
-                    </tr>
-                    
-                 
+                    </tr>   
 
                 </table></h6>
 

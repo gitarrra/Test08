@@ -70,6 +70,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClaimDetail2.aspx" />
     <Content Include="ClaimDetails.aspx" />
     <Content Include="Content\style-for-print.css" />
     <Content Include="Default.aspx" />
@@ -120,6 +121,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ClaimDetail2.aspx.cs">
+      <DependentUpon>ClaimDetail2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimDetail2.aspx.designer.cs">
+      <DependentUpon>ClaimDetail2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ClaimDetails.aspx.cs">
       <DependentUpon>ClaimDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
