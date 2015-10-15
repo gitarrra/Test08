@@ -13,8 +13,8 @@ namespace Test08
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        public string TotalAmountBilled { get; set; }
-        public string TotalYourResponsibility { get; set; }
+        public decimal TotalAmountBilled { get; set; }
+        public decimal TotalYourResponsibility { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -55,8 +55,8 @@ namespace Test08
                 _resposibility += (decimal)item.PatientResponsibilitySum;
             }
 
-            TotalAmountBilled = String.Format("{0:C}",_amount);
-            TotalYourResponsibility = String.Format("{0:C}", _resposibility);
+            TotalAmountBilled = _amount;
+            TotalYourResponsibility = _resposibility;
         }
       
     }
