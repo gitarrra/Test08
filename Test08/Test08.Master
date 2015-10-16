@@ -23,19 +23,19 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="Default.aspx">NY Health</a>
+                    <a href="~/Default.aspx" class="navbar-brand" runat="server">NY Health</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <asp:LoginView ID="LoginView2" runat="server">
-                                <AnonymousTemplate>
-                                    <li><a href="#">About NY Health</a></li>
-                                </AnonymousTemplate>
-                                
-                                <LoggedInTemplate>
-                                    <li><a runat="server" href="~/WebForm1.aspx">Claims</a></li>
-                                    <li><a href="#">About NY Health</a></li>
-                                </LoggedInTemplate>
+                            <AnonymousTemplate>
+                                <li><a runat="server" href ="~/Info_01.aspx">About us</a></li>
+                            </AnonymousTemplate>
+
+                            <LoggedInTemplate>
+                                <li><a runat="server" href="~/user_area/ClaimsList.aspx">Claims</a></li>
+                                <li><a runat="server" href ="~/Info_01.aspx">About us</a></li>
+                            </LoggedInTemplate>
 
                         </asp:LoginView>
 
@@ -50,7 +50,7 @@
                                     <li></li>
                                 </AnonymousTemplate>
                                 <LoggedInTemplate>
-                                    <li><a runat="server" href="WebForm1.aspx"><span class="glyphicon glyphicon-user"></span>&nbsp;
+                                    <li><a runat="server" href="~/user_area/UserData.aspx"><span class="glyphicon glyphicon-user"></span>&nbsp;
                                         <asp:LoginName ID="LoginName1" runat="Server"></asp:LoginName>
                                     </a></li>
                                     <li><a runat="server" href="~/Default.aspx?x=1"><span class="glyphicon glyphicon-log-in"></span>&nbsp; Log out</a></li>

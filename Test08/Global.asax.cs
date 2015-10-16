@@ -22,7 +22,7 @@ namespace Test08
             //Exception ex = Server.GetLastError();
             //var InnerException = ex.InnerException;
 
-            Server.Transfer("~/Error2.aspx");
+            Server.Transfer("Error2.aspx");
 
             //if (InnerException.GetType() == typeof(ArgumentOutOfRangeException))
             //{

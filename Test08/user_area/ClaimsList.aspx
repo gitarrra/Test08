@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Test08.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Test08.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Test08.Master" AutoEventWireup="true" CodeBehind="ClaimsList.aspx.cs" Inherits="Test08.WebForm1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     
@@ -61,7 +61,6 @@
                       <td><%# Item.PatientFirstName %> <%# Item.PatientLastName %></td>
                       <td style="text-align : right" ><%# String.Format("{0:C}", Item.AmountBilledSum) %></td>
                       <td style="text-align : right"><%# String.Format("{0:C}", Item.PatientResponsibilitySum) %></td>
-                      <%--<td style="text-align : right"><a href="ClaimDetails.aspx?c=<%# Item.EncryptedClaimNumber %>">More detail</a>--%>
                       <td style="text-align : right"><a href="ClaimDetail2.aspx?c=<%# Item.EncryptedClaimNumber %>">More detail</a>
                       </td>
                   </tr>

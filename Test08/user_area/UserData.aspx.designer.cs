@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Test08 {
+namespace Test08.user_area {
     
     
-    public partial class WebForm2 {
+    public partial class UserData {
         
         /// <summary>
-        /// resultLabel control.
+        /// userDataButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl resultLabel;
+        protected global::System.Web.UI.WebControls.Button userDataButton;
     }
 }

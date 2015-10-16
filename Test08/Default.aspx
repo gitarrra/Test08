@@ -70,7 +70,7 @@ ul.b {
        
 
         <p>...</p>
-        <p><a class="btn btn-primary" href="#" role="button">Learn more</a></p>
+        <p><a class="btn btn-primary" href="Info_01.aspx" role="button">Learn more</a></p>
    </div>
        
 
