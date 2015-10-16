@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Test08.Master" AutoEventWireup="true" CodeBehind="ClaimDetail2.aspx.cs" Inherits="Test08.ClaimDetail2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link rel="stylesheet" href="Content/style-for-print.css" type="text/css" media="print"/>
 </asp:Content>
 
 
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
 
 <div class="col-sm-10 col-xs-12 col-sm-offset-1">
 
@@ -15,7 +15,7 @@
               <p>
                   Health NY<br />
                   PO BOX 11111<br />
-                  Buffalo NY 14221
+                  Buffalo NY 14201
               </p> 
           </div>
           <div class="col-sm-4"></div>
@@ -92,32 +92,47 @@
 
 
         </div>
+    <br />
+    <br />
+
+        <div>
+            
+
+            <asp:ListView runat="server" ID="statusListView" ItemType="test04.DTO.StatusClaim" SelectMethod="GetStatusList">
+
+                <LayoutTemplate>
+                    
+                    <h6>Claim History:</h6>
+                    <table>
+                        <tr runat="server" id="itemPlaceholder" />
+                    </table>
 
 
-        
+
+                </LayoutTemplate>
+                <ItemTemplate>
+                  <tr  class="small">
+                      <td style="padding-right: 10px;">
+                          <%# Item.DateStatus.ToShortDateString() %>
+                      </td>
+                      <td >
+                              <%# Item.Status %>
+                      </td>
+                    </tr>
+                </ItemTemplate>
 
 
+            </asp:ListView>
 
+        </div>
 
-    
-
+    <button id="printButton" type="button" class="btn btn-default pull-right" onclick="javascript: window.print();">
+      <span class="glyphicon glyphicon-print"></span> Print 
+    </button>
 
 
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </asp:Content>

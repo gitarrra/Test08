@@ -5,7 +5,7 @@
 
     <br />
     
-<div class="panel panel-default col-xs-12 col-sm-6 col-md-6 col-xs-offset-0 col-sm-offset-3 col-md-offset-3 ">
+<div class="panel panel-default col-xs-12 col-sm-6 col-md-4 col-xs-offset-0 col-sm-offset-3 col-md-offset-4">
    
     <br />
     
@@ -34,8 +34,8 @@
 
     <div class="panel-body" >
         <p> 
-        <asp:CheckBox ID="Persist" runat="server" />
-        <label class="small"> Remember me</label>
+        <asp:CheckBox ID="Persist" runat="server" CssClass="checkbox-inline small"  Text=" Remember me" />
+        
         </p>
         <asp:Button ID="Submit1" OnClick="Logon_Click" Text="Log On" runat="server" CssClass="btn" />
     </div>

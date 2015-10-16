@@ -67,6 +67,7 @@ namespace Test08
 
             List<ServiceClaim> _listServices = new List<ServiceClaim>();
             _listServices = claim.ServicesClaimList;
+            
             return _listServices;
            
             
